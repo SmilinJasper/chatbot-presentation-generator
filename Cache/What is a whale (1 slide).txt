@@ -1,0 +1,10 @@
+#Title: What is a Whale?
+
+#Slide: 1
+#Header: What is a Whale?
+#Content: 
+- Whales are marine mammals that belong to the order Cetacea.
+- They are the largest animals on Earth.
+- Whales have streamlined bodies, a blowhole on top of their head, and a tail fin called a fluke.
+- They are known for their ability to communicate through songs and their complex social structures.
+- Whales are found in oceans all around the world and come in various species, including the blue whale, humpback whale, and killer whale.

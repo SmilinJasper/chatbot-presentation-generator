@@ -1,0 +1,13 @@
+#Title: WHAT IS A CAT?
+
+#Slide: 1
+#Header: What is a cat?
+#Content: 
+- A domesticated carnivorous mammal
+- Belongs to the Felidae family
+- Known for its independent and curious nature
+- Has retractable claws and sharp teeth
+- Comes in various breeds and colors
+- Often kept as a pet for companionship
+
+#Slide: END

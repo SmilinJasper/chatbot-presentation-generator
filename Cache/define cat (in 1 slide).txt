@@ -1,0 +1,10 @@
+#Title: DEFINING CATS
+
+#Slide: 1
+#Header: Defining Cats
+#Content: 
+- Cats are small, carnivorous mammals.
+- They are domesticated pets and are often kept as companions.
+- Cats have retractable claws and are known for their agility and hunting skills.
+- They come in various breeds, colors, and sizes.
+- Cats are known for their independent nature and ability to clean themselves.

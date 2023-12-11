@@ -1,0 +1,32 @@
+#Title: DEFINING A CAT
+
+#Slide: 1
+#Header: Table of Contents
+#Content: 
+1. What is a Cat?
+2. Characteristics of Cats
+
+#Slide: 2
+#Header: What is a Cat?
+#Content: 
+- A cat is a small, domesticated carnivorous mammal.
+- It is often kept as a pet for companionship and hunting vermin.
+- Cats are known for their agility, grace, and independent nature.
+
+#Slide: 3
+#Header: Characteristics of Cats
+#Content: 
+- Cats have retractable claws that they use for hunting and climbing.
+- They have excellent night vision and can see in almost total darkness.
+- Cats are known for their grooming habits and spend a significant amount of time cleaning themselves.
+- They communicate through vocalizations, body language, and scent marking.
+
+#Slide: 4
+#Header: Summary
+#Content: 
+- Cats are small, domesticated carnivorous mammals that are kept as pets.
+- They are known for their agility, grace, and independent nature.
+- Cats have retractable claws, excellent night vision, and are meticulous groomers.
+- They communicate through vocalizations, body language, and scent marking.
+
+#Slide: END

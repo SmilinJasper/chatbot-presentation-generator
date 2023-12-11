@@ -1,0 +1,7 @@
+#Title: What is a Cat?
+
+#Slide: 1
+#Header: What is a Cat?
+#Content: A cat is a small, carnivorous mammal that is often kept as a pet. Cats are known for their agility, grace, and independent nature. They have sharp retractable claws, keen senses, and a flexible body. Cats are also known for their ability to purr and their affinity for hunting.
+
+#Slide: END

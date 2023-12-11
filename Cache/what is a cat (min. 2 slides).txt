@@ -1,0 +1,41 @@
+#Title: WHAT IS A CAT?
+
+#Slide: 1
+#Header: Table of Contents
+#Content: 
+1. Introduction
+2. Physical Characteristics of Cats
+3. Behavior and Communication of Cats
+4. Summary
+
+#Slide: 2
+#Header: Introduction
+#Content: 
+- Cats are domesticated mammals that are commonly kept as pets.
+- They belong to the Felidae family and are known for their independent nature.
+- Cats have been companions to humans for thousands of years.
+
+#Slide: 3
+#Header: Physical Characteristics of Cats
+#Content: 
+- Cats come in various breeds, sizes, and colors.
+- They have sharp retractable claws and excellent night vision.
+- Cats have a flexible body, with a strong and agile physique.
+- Their fur can be long or short, and they have sensitive whiskers.
+
+#Slide: 4
+#Header: Behavior and Communication of Cats
+#Content: 
+- Cats are known for their curious and playful nature.
+- They are skilled hunters and have a strong sense of territoriality.
+- Cats communicate through body language, vocalizations, and scent marking.
+- Purring is a common behavior that indicates contentment in cats.
+
+#Slide: 5
+#Header: Summary
+#Content: 
+- Cats are domesticated mammals that are popular as pets.
+- They have unique physical characteristics and exhibit specific behaviors.
+- Understanding their nature and needs is essential for their well-being and a harmonious relationship with humans.
+
+#Slide: END

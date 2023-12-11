@@ -1,0 +1,37 @@
+#Title: What is a Cat?
+
+#Slide: 1
+#Header: Table of Contents
+#Content: 
+1. Introduction to Cats
+2. Characteristics of Cats
+
+#Slide: 2
+#Header: Introduction to Cats
+#Content: 
+- Cats are small, carnivorous mammals.
+- They are often kept as pets and are known for their independent nature.
+- Cats have been domesticated for thousands of years and are one of the most popular pets worldwide.
+
+#Slide: 3
+#Header: Characteristics of Cats
+#Content: 
+- Cats have sharp retractable claws and are excellent climbers.
+- They have highly developed senses, including excellent night vision and hearing.
+- Cats are known for their agility and flexibility, which allows them to squeeze through small spaces.
+
+#Slide: 4
+#Header: Characteristics of Cats (cont.)
+#Content: 
+- Cats are known for their grooming habits and spend a significant amount of time cleaning themselves.
+- They have a unique hunting instinct and are skilled predators.
+- Cats communicate through vocalizations, body language, and scent marking.
+
+#Slide: 5
+#Header: Summary
+#Content: 
+- Cats are small, carnivorous mammals that have been domesticated for thousands of years.
+- They have sharp claws, excellent senses, and are known for their agility.
+- Cats are skilled predators and communicate through various means.
+
+#Slide: END

@@ -1,0 +1,7 @@
+#Title: What is a Dog?
+
+#Slide: 1
+#Header: What is a Dog?
+#Content: A dog is a domesticated mammal that belongs to the Canidae family. They are known for their loyalty, companionship, and diverse breeds. Dogs have been bred for various purposes, such as hunting, herding, and as pets. Let's explore more about dogs!
+
+#Slide: END

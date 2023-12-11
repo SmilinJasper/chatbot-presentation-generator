@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>CyberTimon CT AI</title>
+  <head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">	
+	<link rel="icon" href="/static/favicon.ico?v=2" type="image/x-icon">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<meta name="viewport" content="width=400, initial-scale=1" />
+	<meta charset="UTF-8">
+
+    <style>
+            .play-voice-icon:hover{
+color: hsl(240, 15%, 84%);
+cursor: pointer;
+      }
+      body {
+        font-family: Quicksand;
+		background-color: #343541;
+		color: #ECECF1;
+      }
+      h1 {
+        background-color: #c35250;
+        color: #ECECF1;
+        display: inline-block;
+        font-size: 2em;
+        margin: 0;
+        padding: 10px;
+        border: 2px solid #000000;
+		border-radius: 10px;
+		font-family: monospace;
+      }
+	  a {
+		color: #c35250;
+	  }
+	  text {
+		font-size: 15px;
+		text-align: center;
+	  }
+
+      #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 20px;
+      }
+      #textInput {
+        width: 100%;
+		background-color: #5c5c5c63;
+        border: 2px solid #000000;
+		border-radius: 10px;
+        font-family: Quicksand;
+        font-size: 17px;
+        margin-bottom: 10px;
+		block-size: 25px;
+		padding: 5px;
+		color: #ECECF1;
+      }
+      #textInput:focus {
+        outline:none;
+        border: 2px solid #000000;
+      }
+      .userText {
+        padding-left: 10%;
+        animation: pulse .5s ease-in-out;
+      }
+      .userText p {
+        color: #ECECF1;
+        font-family: Quicksand;
+        font-size: 17px;
+        text-align: left;
+        line-height: 25px;
+        margin-top: 25px;
+        background-color: #5c5c5c63;
+        box-shadow: 10px 10px 0px 0px #000000;
+        border: 2px solid #000000;
+		border-radius: 10px;
+        padding: 20px;
+		white-space: pre-wrap;
+      }
+
+      .botText {
+        padding-right: 10%;
+        animation: pulse .5s ease-in-out;
+      }
+      .botText p {
+        color: #ECECF1;
+        font-family: Quicksand;
+        font-size: 17px;
+        text-align: left;
+        line-height: 25px;
+		margin-top: 25px;
+        background-color: #28282863 ;
+        box-shadow: 10px 10px 0px 0px #000000;
+        border: 2px solid #000000;
+		border-radius: 10px;
+        padding: 20px;
+		white-space: pre-wrap;
+      }
+	  
+      .botText img {
+        color: #ECECF1;
+        line-height: 25px;
+		margin-top: 25px;
+        background-color: #28282863 ;
+        box-shadow: 10px 10px 0px 0px #000000;
+        border: 2px solid #000000;
+	max-width: -webkit-fill-available;
+		border-radius: 10px;
+      }
+	  
+	  .newConversation {
+	    color: #ececf154;
+	  }
+
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }
+      .boxed {
+        margin-left: auto;
+		margin-right: auto;
+        width: 50%;
+        margin-top: 20px;
+		height: 450px;
+      }
+	  
+	  @media only screen and (max-width:900px) {
+	    .boxed {
+		  width: 80%;
+		}
+	  }
+	  
+	  
+	  @media only screen and (max-width:500px) {
+	    .boxed {
+		  width: 90%;
+		}
+	  }
+	  
+      @keyframes pulse {
+        from {
+          transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+          transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+        to {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>
+        CyberTimon CT AI - Powerpoint Generator
+      </h1>
+	  
+    </center>
+
+    <div class="box"></div>
+    <div class="boxed">
+      <div>
+        <div id="chatbox"></div>
+        <div id="userInput">
+          <textarea id="textInput" type="text" autofocus="autofocus" name="msg" placeholder="Enter topic here..."></textarea>
+        </div>
+      </div>
+      <script>
+
+        let speechEnabled = false;
+
+        if (!"speechSynthesis" in window) {
+          alert("Sorry, your browser doesn't support text to speech!");
+        }
+
+        const synth = window.speechSynthesis;
+        const voices = synth.getVoices();
+
+        var textInput = document.getElementById("textInput");
+        var chatBox = document.getElementById("chatbox");
+
+        function renderStartMessage(msg, className) {
+          var msgHtml = document.createElement("div");
+          msgHtml.appendChild(document.createElement("p"))
+                 .appendChild(document.createElement("span"))
+                 .appendChild(document.createTextNode(msg));
+          msgHtml.className = className;
+          return msgHtml;
+        }
+		
+		function renderMessage(msg, className) {
+		  var msgHtml = document.createElement("div");
+		  var para = msgHtml.appendChild(document.createElement("p"));
+		  var span = para.appendChild(document.createElement("span"));
+		  
+		  span.appendChild(document.createTextNode("The PowerPoint is ready!\nDownload it here: "));
+		  var linkQA = document.createElement("a");
+		  linkQA.href = msg;
+		  linkQA.appendChild(document.createTextNode("Download"));
+		  span.appendChild(linkQA);
+
+      if (speechEnabled) {
+
+      let utterance = new SpeechSynthesisUtterance('The PowerPoint is ready! Download it here.');
+
+      utterance.voice = voices[0];
+      utterance.lang = voices[0].lang;
+      synth.speak(utterance);
+      }
+
+      var msgToEdit = msg;
+
+      // Replace whitespaces with "%20%", ".pptx" with ".txt", and "GeneratedPresentations" with "cache"
+      var msgTxt = msgToEdit.replace(/\s/g, "%20")
+                                  .replace(/\.pptx$/, ".txt")
+                                  .replace(/GeneratedPresentations/g, "cache");
+
+      let filePath = msgTxt;
+
+      fetch(filePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch ${filePath}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Process the loaded text
+                var slidesData = document.createElement("div");
+                slidesData.className = "botText";
+		            var slidesContent = slidesData.appendChild(document.createElement("p"));
+		            var slidesContentSpan = slidesContent.appendChild(document.createElement("span"));
+                slidesContentSpan.innerHTML = data;
+                chatBox.appendChild(slidesData);
+
+                if(speechEnabled) {
+
+                let slidesUtterance = new SpeechSynthesisUtterance(data);
+
+                slidesUtterance.voice = voices[0];
+                slidesUtterance.lang = voices[0].lang;
+                synth.speak(slidesUtterance);
+                }
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    
+          msgHtml.className = className;
+          return msgHtml;
+        }
+
+        function writeAsUser(msg) {
+          chatBox.appendChild(renderStartMessage(msg, "userText"));
+          scrollToBottom();
+        }
+
+        function writeStartMessage(msg) {
+          chatBox.appendChild(renderStartMessage(msg, "botText"));
+          scrollToBottom();
+        }
+
+        function writeAsBot(msg) {
+          chatBox.appendChild(renderMessage(msg, "botText"));
+          scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            textInput.scrollIntoView({ block: "start", behavior: "smooth" });
+        }
+
+		function talkToBot() {
+          var rawText = textInput.value;
+		  textInput.value = "";
+		  textInput.setAttribute("style", "height: 31" + "px;overflow-y:hidden;");
+          
+          writeAsUser(rawText);
+		  
+          fetch("/get?" + new URLSearchParams({
+            msg: rawText
+          })).then(response => response.text())
+             .then(responseText => {
+                writeAsBot(responseText);
+              });
+        }
+		
+		textInput.setAttribute("style", "height: 31" + "px;overflow-y:hidden;");
+		textInput.addEventListener("input", OnInput, false);
+
+		function OnInput() {
+			if(this.value === "") {
+				this.style.height = '31px';
+				this.focus();
+			}else{
+				this.style.height = 0;
+				this.style.height = (this.scrollHeight) + "px";
+			}
+		}
+		
+        textInput.addEventListener('keypress', e => {
+          if (e.which == 13 && e.shiftKey == false && textInput.value.length > 2) {
+            talkToBot();
+			if(event.preventDefault) event.preventDefault();
+			return false;
+          }
+        });
+
+        writeStartMessage("Hello!\nUse artificial intelligence to generate complete PowerPoint presentations!\nIn addition, placeholders for images are created.\n\nWhat do you want a presentation about?");
+
+const botText = document.querySelector('.botText');
+const voiceIcon = document.createElement('span');
+
+botText.appendChild(voiceIcon);
+botText.children[1].classList.add('play-voice-icon');
+
+const playVoiceIcon = document.querySelector('.play-voice-icon');
+playVoiceIcon.innerHTML = 'Enable Voice Assistance';
+
+playVoiceIcon.addEventListener('click', () => {
+
+  if(speechEnabled) {
+    speechEnabled = false;
+    playVoiceIcon.innerHTML = 'Enable Voice Assistance';
+  } else {
+    speechEnabled = true;
+    playVoiceIcon.innerHTML = 'Disable Voice Assistance';
+  }
+
+  if(speechEnabled) {
+
+    const readResult = setTimeout(() => {
+        if (synth.paused === true) {
+            synth.resume();
+            return;
+        } 
+        
+        textToSpeech(botTextContent.innerText);
+    }, 100)
+
+  }
+
+})
+
+botText.children[0].children[0].className = 'bot-text-content';
+const botTextContent = document.querySelector('.bot-text-content');
+
+
+function textToSpeech(text) {
+    const msg = new SpeechSynthesisUtterance();
+    msg.voice = voices[0];
+    msg.lang = voices[0].lang;
+    msg.text = text;
+
+    synth.speak(msg);
+}
+
+      </script>
+
+    </div>
+  </body>
+</html>
